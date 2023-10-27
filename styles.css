@@ -1,4 +1,4 @@
-.dropdown {
+.dropdown-menu {
     position: relative;
     display: inline-block
 }
@@ -17,16 +17,39 @@
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+} it just doesnt work 
 
 
 h1 {
    display: flex;
    justify-content: center;
    color: brown;
+   padding: 10px;
+   border: 15px;
 }
 
 .footer {
     display: flex;
     content-visibility: auto;
+}
+
+#subscription {
+    display: auto;
+    justify-content: space-around;
+}
+
+.img {
+    display: flex;
+    justify-content: center;    
+}
+
+nav {
+    display: flex;
+
+}
+
+.section1 {
+float: right;
+padding: 10px 5px 5px 10px;
+border: 20px;
 }
