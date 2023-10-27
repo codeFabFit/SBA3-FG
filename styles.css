@@ -1,12 +1,18 @@
 
 h1 {
+
    display: flex;
    justify-content: center;
    color: "red";
    padding: 10px;
    border: 15px;
+   font-family: Georgia;
 }
 
+
+p {
+    font-family: Georgia;
+}
 .footer {
     display: flex;
 }
@@ -42,12 +48,15 @@ border: 20px;
     border: 20px;
 }
 
-.quotes {
+#quotes {
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 
 fieldset {
     background-color: azure;
+}
+
+.rounded {
+    justify-content: space-between;
 }

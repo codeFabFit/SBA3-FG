@@ -1,6 +1,15 @@
 
 // you need atleast 2 eventlistner to generate random quotes about motivation, love etc 
-
+const quote =[ "The power is always within you", "It might be tough but your tougher", "If you can do the first 5 you can do the last 5", "Never be afraid to fail, only be afraid to quit"]
+const generateButton = document.getElementById("generateButton");
+const quoteOutput = document.getElementById("quoteOutput");
+generateButton.addEventListener("click", () => {
+    element.preventDefault();
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const randomQuote = quotes[randomIndex];
+    quoteOutput.textContent = randomQuote;
+});
+console.log(quoteOutput)
 // must createElements from within 
 
 // you need queryselector or ALL on h1 or p element
