@@ -1,6 +1,6 @@
 
 // you need atleast 2 eventlistner to generate random quotes about motivation, love etc 
-const quote =[ "The power is always within you", "It might be tough but your tougher", "If you can do the first 5 you can do the last 5", "Never be afraid to fail, only be afraid to quit"]
+const quote =[ "The power is always within you", "It might be tough but your tougher", "If you can do the first 5 you can do the last 5", "Never be afraid to fail, only be afraid to quit", "everyday we have 24 hrs to make a difference for ourselves and our community", "you gotta get to the fame one way or another", "Never underestimate your talent"]
 const generateButton = document.getElementById("generateButton");
 // const quoteOutput = document.getElementById("quoteOutput");
 generateButton.addEventListener("click", () => {
@@ -24,19 +24,21 @@ function validationForm () {
 
     if (!firstName || !lastName || !email || !password) {
         document.getElementById("error message").textContent = "Must complete all fields to proceed";
+        Element.preventDefault()
+
         return false;
     }
 
     if (email.indexOf('@') === -1 || email.indexOf(".com") === -1) {
-        document.getElementById("error-message").textContent = "Invalid Email Format";
+        document.getElementById("error-message").textContent = "Please enter a valid email addess";
         return false;
-    }
-   else {
+    }  Element.preventDefault();
     return true;
 
+//  window.alert("we recieved your information")
 }
-   } 
-    // window.alert("we recieved your information")
+   
+   
 
 
 // appendchild remember the node and parents 
@@ -52,13 +54,24 @@ themeButton.addEventListener("click", () => {
     if (body.classList.contains("dark-mode")) {
         themeButton.textContent = "Light Mode";
     } else {
-        themeButton.textContent = "Dark Mode"
+        themeButton.textContent = "Dark Mode";
     }
 })
 
 
 // include an attribute 
 
-// BOM Property to include maybe do a history, 
+
+
+// // BOM Property to include maybe do a history, concole is showing an error i dont understand
+// const goBackButton = document.getElementById("goBack");
+// const goForwardbutton = document.getElementById("goForward")
+
+// goBackButton.addEventListener("click", () => {
+//     window.history.back()
+// });
+// goForwardbutton.addEventListener("click", () => {
+//     window.history.forward();
+// } )
 
 // 
