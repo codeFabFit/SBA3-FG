@@ -60,3 +60,9 @@ fieldset {
 .rounded {
     justify-content: space-between;
 }
+
+
+body, #theme{
+    background-color: #333;
+    color:#fff
+}
