@@ -62,7 +62,6 @@ fieldset {
 }
 
 
-
 body {
     background-color: #fff;
     color: #000
@@ -71,4 +70,11 @@ body {
 body.dark-mode {
     background-color: #333;
     color: #fff
+}
+
+.phone-alert, #phone {
+    display: flex;
+    justify-content: center;
+    max-height: 70px;
+
 }

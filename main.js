@@ -20,30 +20,29 @@ function validationForm () {
     const firstName = document.getElementById("firstName").value;
     const lastName = document.getElementById("lastName").value;
     const email = document.getElementById("email").value;
-    const password = document.getElementById("passwod").value;
+    const password = document.getElementById("password").value;
 
     if (!firstName || !lastName || !email || !password) {
         document.getElementById("error message").textContent = "Must complete all fields to proceed";
         Element.preventDefault()
-
         return false;
     }
-
-    if (email.indexOf('@') === -1 || email.indexOf(".com") === -1) {
+    if (email.indexOf('@') === -1 && email.indexOf(".com") === -1) {
         document.getElementById("error-message").textContent = "Please enter a valid email addess";
         return false;
-    }  Element.preventDefault();
-    return true;
-
-//  window.alert("we recieved your information")
-}
+    }  Element.preventDefault(); {
+  return true
+    }}
+    
+    
+    // window.alert("we recieved your information")
    
    
 
 
 // appendchild remember the node and parents 
 
-// remmeber to use textContent (just like on the lab get it so that when you click onee of the links you will be able to see that word of what they clicked)
+// remmeber to use textContent (just like on the lab get it so that when you click FQA you will be able to see that word of what they clicked)
 
 // find a way to make style have an affect when they click somewhere on the page ex. dark mode
 
@@ -71,7 +70,5 @@ themeButton.addEventListener("click", () => {
 //     window.history.back()
 // });
 // goForwardbutton.addEventListener("click", () => {
-//     window.history.forward();
-// } )
-
-// 
+//     window.history.forward(); 
+// });
