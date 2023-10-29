@@ -13,6 +13,26 @@ generateButton.addEventListener("click", () => {
 
 // must createElements from within 
 
+const cList = document.getElementById("commentList");
+const cInput = document.getElementById("commentInput");
+const cBtn = document.getElementById("addCommentBtn");
+
+// The function to handle adding new comments.
+function addComment() {
+  const newComment = cInput.value;
+
+  // This wasn't in the instructions, but
+  // we added a guard against empty comments:
+  if (newComment === "") return;
+
+  cList.appendChild(document.createElement("li")).textContent = newComment;
+  cInput.value = "";
+  cInput.focus();
+}
+
+// Register the event listener.
+cBtn.addEventListener("click", addComment);
+
 // you need queryselector or ALL on h1 or p element
 
 // one form form form validation 
@@ -46,16 +66,6 @@ function validationForm () {
 
 // find a way to make style have an affect when they click somewhere on the page ex. dark mode
 
-const themeButton = document.getElementById("theme");
-const body = document.body;
-themeButton.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    if (body.classList.contains("dark-mode")) {
-        themeButton.textContent = "Light Mode";
-    } else {
-        themeButton.textContent = "Dark Mode";
-    }
-})
 
 
 // include an attribute 
@@ -63,12 +73,3 @@ themeButton.addEventListener("click", () => {
 
 
 // // BOM Property to include maybe do a history, concole is showing an error i dont understand
-// const goBackButton = document.getElementById("goBack");
-// const goForwardbutton = document.getElementById("goForward")
-
-// goBackButton.addEventListener("click", () => {
-//     window.history.back()
-// });
-// goForwardbutton.addEventListener("click", () => {
-//     window.history.forward(); 
-// });

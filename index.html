@@ -42,6 +42,7 @@
           </li>
         
         </ul>
+        <p><a href="#" class="d-inline-flex focus-ring focus-ring-dark py-1 px-2 text-decoration-none border rounded-2">Dark focus</a></p>
 
         <!-- able to search and get specific part of page with javascript -->
         <form class="d-flex" role="search">
@@ -65,7 +66,7 @@
 <!-- maybe more pictures or gif here -->
 
 <h3>Worry About Yourself 24/7</h3> 
-<button id="theme" class="dark-mode">Change Theme</button>
+
 
 <p>A motivational brand designed to get you to focus on your needs, goals and desires to become the best person you can be</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quos soluta minima necessitatibus, numquam earum nisi, odit veritatis laborum esse magnam ipsum, dignissimos molestias obcaecati quis ex voluptatum atque. Iste?</p>
@@ -98,12 +99,12 @@
         <div class="card-body">
           <h5 class="card-title">Quote Generator</h5>
           <p class="card-text">generate a quote at random</p>
-          <input class="keyword" type="text">
+          <!-- <input class="keyword" type="text"> -->
           <a href="#" class="btn btn-primary" id="generateButton">New Quote Please</a> 
           <p id="quoteOutput">Your New Quote is: </p>
         </div>
       </div>
-     
+    
 <!-- with this we want to do something that will give a new quote each time its clicked -->
 </container>
 
@@ -144,17 +145,17 @@
     <form id ="registion">
         <div class="mb-3">
             <div class="input-group">
-                <span class="input-group-text">First and last name</span>
-                <input type="text" aria-label="First name" class="form-control">
-                <input type="text" aria-label="Last name" class="form-control">
+                <span class="input-group-text"required>First and last name</span>
+                <input type="text" required aria-label="First name" class="form-control">
+                <input type="text" required aria-label="Last name" class="form-control">
               </div>
           <label for="exampleInputEmail1" class="form-label">Email address</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          <div id="emailHelp" class="form-text" required >We'll never share your email with anyone else.</div>
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <input type="password" required minlength="4" maxlength="10" class="form-control" id="exampleInputPassword1">
         </div>
         <div class="mb-3 form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -163,10 +164,33 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
 
-
 <hr>
-<button id="goBack">Go Back</button>
-<button id="goBack">Go Forward</button>
+
+<!--  -->
+
+<!-- <img src="/pictures/IMG_7914.jpg" maxheight="150px" maxwidth="150px" > -->
+
+<figure class="figure">
+  <img src="/pictures/IMG_7914.jpg" class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption">A caption for the above image.</figcaption>
+</figure>
+
+
+<h4>Leave us some of your comments and we can add them to our directory</h4>
+<input type="text" id="commentInput" />
+<button id="addCommentBtn">Add Quotes</button>
+<h3>Featured Quotes</h3>
+<ul id="commentList">
+  <p><em>Check out some quotes our users created:</em></p>
+
+  
+  <li>It's tough but your tougher - Fab</li>
+  <li>We all make mistakes, just remember to learn to from them - Joanne </li>
+</ul>
+
+
+
+
 <footer>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quia hic dicta. Et vel nihil voluptatum sunt ad officia, facilis reiciendis? Amet at, deleniti placeat itaque quia non odit distinctio?</p>
 </footer>
