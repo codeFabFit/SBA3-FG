@@ -17,12 +17,9 @@ const cList = document.getElementById("commentList");
 const cInput = document.getElementById("commentInput");
 const cBtn = document.getElementById("addCommentBtn");
 
-// The function to handle adding new comments.
 function addComment() {
   const newComment = cInput.value;
 
-  // This wasn't in the instructions, but
-  // we added a guard against empty comments:
   if (newComment === "") return;
 
   cList.appendChild(document.createElement("li")).textContent = newComment;
@@ -54,8 +51,7 @@ function validationForm () {
   return true
     }}
     
-    
-    // window.alert("we recieved your information")
+
    
    
 
@@ -86,3 +82,44 @@ document.addEventListener("click", (e) => {
 
 // // nav bar 
 
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const targetId= link.getAttribute('href').substring(1);
+
+        const targetSection= document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.scrollIntoView({behavior: 'smooth'});
+        }
+    });
+}); addEventListener();
+
+document.getElementById('faq-link').addEventListener('click', function(event) {
+    event.preventDefault();
+    
+    // Change the body content to display "FAQ"
+    document.getElementById('content').innerHTML = '<h1>FAQ</h1>';
+});
+
+
+
+// navLinks.forEach(link => {
+//     link.addEventListener('click', (e) => {
+//         e.preventDefault();
+
+//         const targetId = link.getAttribute('href').substring(1);
+        
+//         if (targetId === 'faq') {
+//             // If "FAQ" is clicked, create and append FAQ content
+//             const faqContent = document.createElement('div');
+//             faqContent.innerHTML = '<h1>FAQ</h1><p>This is the FAQ page content.</p>';
+//             faqContainer.innerHTML = ''; // Clear any previous content
+//             faqContainer.appendChild(faqContent);
+//         } else {
+//             // Handle other navigation links here (if needed)
+//         }
+//     });
+// });
