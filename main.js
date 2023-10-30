@@ -30,7 +30,6 @@ function addComment() {
 // Register the event listener.
 cBtn.addEventListener("click", addComment);
 
-// you need queryselector or ALL on h1 or p element
 
 // one form form form validation 
 function validationForm () {
@@ -48,37 +47,9 @@ function validationForm () {
         document.getElementById("error-message").textContent = "Please enter a valid email addess";
         return false;
     }  Element.preventDefault(); {
-  return true
+//   return true
     }}
     
-
-   
-   
-
-
-// appendchild remember the node and parents 
-
-// remmeber to use textContent (just like on the lab get it so that when you click FQA you will be able to see that word of what they clicked)
-
-// find a way to make style have an affect when they click somewhere on the page ex. dark mode
-document.addEventListener("click", (e) => {
-    e.stopPropagation();
-    document.body.classList.toggle("theme-dark");
-  });
-  
-  // Registering an anonymous event listener to the input.
-  cInput.addEventListener("click", (e) => {
-    e.stopPropagation();
-  });
-  
-  // Registering an anonymous event listener to the
-  // list of comments.
-  cList.addEventListener("click", (e) => {
-    e.stopPropagation();
-  })
-// include an attribute 
-
-
 
 // // nav bar 
 
@@ -95,31 +66,43 @@ navLinks.forEach(link => {
             targetSection.scrollIntoView({behavior: 'smooth'});
         }
     });
-}); addEventListener();
+}); 
 
-document.getElementById('faq-link').addEventListener('click', function(event) {
-    event.preventDefault();
-    
-    // Change the body content to display "FAQ"
-    document.getElementById('content').innerHTML = '<h1>FAQ</h1>';
+
+
+
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const targetId = link.getAttribute('href').substring(1);
+        
+        if (targetId === 'faq') {
+            // If "FAQ" is clicked, create and append FAQ content
+            const faqContent = document.createElement('div');
+            faqContent.innerHTML = '<h1>FAQ</h1><p>This is the FAQ page content.</p>';
+            faqContainer.innerHTML = 'FAQ'; 
+            faqContainer.appendChild(faqContent);
+        } else {
+            window.display("Your doing a good job")
+        }
+    });
 });
 
+// you need queryselector or ALL on h1 or p element
 
+    // Get all h1 elements
+    const h1Elements = document.querySelectorAll('h1');
+    const h1Container = document.getElementById('h1-container');
 
-// navLinks.forEach(link => {
-//     link.addEventListener('click', (e) => {
-//         e.preventDefault();
+    // Create a new div to display the h1 content
+    const h1ContentDiv = document.createElement('div');
 
-//         const targetId = link.getAttribute('href').substring(1);
-        
-//         if (targetId === 'faq') {
-//             // If "FAQ" is clicked, create and append FAQ content
-//             const faqContent = document.createElement('div');
-//             faqContent.innerHTML = '<h1>FAQ</h1><p>This is the FAQ page content.</p>';
-//             faqContainer.innerHTML = ''; // Clear any previous content
-//             faqContainer.appendChild(faqContent);
-//         } else {
-//             // Handle other navigation links here (if needed)
-//         }
-//     });
-// });
+    // Loop through h1 elements and append their content
+    h1Elements.forEach((h1Element) => {
+        const h1Text = h1Element.textContent;
+        const h1Item = document.createElement('p');
+        h1Item.textContent = h1Text;
+        h1ContentDiv.appendChild(h1Item);
+    });
+   
