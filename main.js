@@ -65,11 +65,24 @@ function validationForm () {
 // remmeber to use textContent (just like on the lab get it so that when you click FQA you will be able to see that word of what they clicked)
 
 // find a way to make style have an affect when they click somewhere on the page ex. dark mode
-
-
-
+document.addEventListener("click", (e) => {
+    e.stopPropagation();
+    document.body.classList.toggle("theme-dark");
+  });
+  
+  // Registering an anonymous event listener to the input.
+  cInput.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+  
+  // Registering an anonymous event listener to the
+  // list of comments.
+  cList.addEventListener("click", (e) => {
+    e.stopPropagation();
+  })
 // include an attribute 
 
 
 
-// // BOM Property to include maybe do a history, concole is showing an error i dont understand
+// // nav bar 
+
